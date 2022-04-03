@@ -32,7 +32,7 @@ int main()
   f_2 = clock();
 
   printf("%f: a_2 takes %f ms\n", a_2, ((double)(f_2 - s_2)) * 1000.0 / CLOCKS_PER_SEC);
-
+  printf("%\nf", (double)(f_2 - s_2)/(double)(f_1 - s_1));
 
 
   return 0;
