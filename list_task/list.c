@@ -70,13 +70,17 @@ List l_insert_to(List l, int ind, int v){
 
 }
 List l_insert_keep_sorting(List l, int v){
-    int ind = 0;
     List c =l;
     while(c->next){
-       if(c->value > v)  return l_insert_to(l,ind,v);
+       if(c->value > v ){
+       return l_prepend(l,v);
+       }
+       if(c->next->value > v){
+          c->next = l_prepend(c->next,v);
+          return l;
+       };
        c = c->next;
-       ind++;
     }
-    return l_insert_to(l,ind+1,v);
+    return l_append(l,v);
 
 }

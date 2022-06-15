@@ -28,6 +28,10 @@ int main()
     l = l_insert_keep_sorting(l,4);
     l_print(l);
 
+
+    l = l_insert_keep_sorting(l,4);
+    l_print(l);
+
     l = l_insert_to(l,2,99);
     l_print(l);
 
